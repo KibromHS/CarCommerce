@@ -1,10 +1,5 @@
-@extends('layouts.clean', ['cssClass' => 'page-signup'])
-
-@section('title', 'Sign Up')
-
-@section('childContent')
-
-<main>
+<x-base-layout title="Signup" cssClass="page-signup">
+  <main>
     <div class="container-small page-login">
       <div class="flex" style="gap: 5rem">
         <div class="auth-page-form">
@@ -53,7 +48,7 @@
             </div>
             <div class="login-text-dont-have-account">
               Already have an account? -
-              <a href="/login.html"> Click here to login </a>
+              <a href="{{ route('login') }}"> Click here to login </a>
             </div>
           </form>
         </div>
@@ -63,5 +58,4 @@
       </div>
     </div>
   </main>
-
-@endsection
+</x-base-layout>
